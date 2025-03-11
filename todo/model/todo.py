@@ -20,12 +20,24 @@ class Todo:
         return str(f"{self.code_id} - {self.title}")
 
 
-class Todobook:
+class TodoBook:
 
     def __init__(self):
         self.todos: dict[int,Todo] = {}
 
     def add_todo(self, title: str,  description: str):
+        id: int = len(self.todos)
+        valor = Todo(id, title, description) #Creando objeto
+        self.todos[id] = valor
+
+    def pending_todos(self,):
+        for todos in self.todos:
+            return
+
+
+
+
+
 
         return
 
